@@ -7,7 +7,7 @@ pipeline{
     environment{
         
         registry = "ayushthakur123/json-project"
-        registryCredential = 'new-token'        
+        registryCredential = 'ayushthakur123'        
     }
     
     stages{
@@ -21,7 +21,7 @@ pipeline{
        stage('Deploy Image') {
       steps{
          script {
-            docker.withRegistry( '', 94fbb51c-222c-4bdd-9c69-94c9b90d817c ) {
+            docker.withRegistry( '', 415f56aa-fbf1-4857-83f1-508821825e56 ) {
             dockerImage.push()
           }
         }
