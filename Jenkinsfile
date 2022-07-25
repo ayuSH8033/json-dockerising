@@ -21,7 +21,7 @@ pipeline{
        stage('Deploy Image') {
       steps{
          script {
-            docker.withRegistry( '', 415f56aa-fbf1-4857-83f1-508821825e56 ) {
+            docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
           }
         }
